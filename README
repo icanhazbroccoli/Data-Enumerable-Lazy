@@ -1,6 +1,3 @@
-Data-Enumerable-Lazy version 0.01
-=================================
-
 NAME
     Data::Enumerable::Lazy
 
@@ -488,7 +485,7 @@ SEE ALSO
     https://en.wikipedia.org/wiki/Lazy_evaluation
 
   Library GitHub page:
-    https://github.com/icanhazbroccoli/Perl-Data-Enumerable-Lazy
+    https://github.com/icanhazbroccoli/Data-Enumerable-Lazy
 
   Alternative implementations:
     https://metacpan.org/pod/List::Generator
@@ -502,3 +499,4 @@ COPYRIGHT AND LICENSE
     permitted in any medium without royalty provided the copyright notice
     and this notice are preserved. This file is offered as-is, without any
     warranty.
+

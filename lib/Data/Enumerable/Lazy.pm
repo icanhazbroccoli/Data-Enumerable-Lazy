@@ -937,7 +937,7 @@ L<https://en.wikipedia.org/wiki/Lazy_evaluation>
 
 =head2 Library GitHub page:
 
-L<https://github.com/icanhazbroccoli/Perl-Data-Enumerable-Lazy>
+L<https://github.com/icanhazbroccoli/Data-Enumerable-Lazy>
 
 =head2 Alternative implementations:
 
