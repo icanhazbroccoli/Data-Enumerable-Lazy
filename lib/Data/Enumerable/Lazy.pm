@@ -11,7 +11,7 @@ our $VERSION = '0.03';
 
 =head1 NAME
 
-Data::Enumerable::Lazy
+Data::Enumerable::Lazy - Lazy generator + enumerable for Perl5.
 
 =head1 SYNOPSIS
 
