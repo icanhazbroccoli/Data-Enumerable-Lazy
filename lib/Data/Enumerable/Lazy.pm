@@ -941,9 +941,9 @@ L<https://github.com/icanhazbroccoli/Data-Enumerable-Lazy>
 
 =head2 Alternative implementations:
 
-L<https://metacpan.org/pod/List::Generator>
-L<https://metacpan.org/pod/Generator::Object>
-L<https://metacpan.org/pod/Iterator>
+L<List::Generator>
+L<Generator::Object>
+L<Iterator>
 
 =cut
 
