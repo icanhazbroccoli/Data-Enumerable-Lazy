@@ -113,7 +113,7 @@ EXAMPLES
     In this example we will output a numbers of a multiplication table
     10x10. What's interesting in this example is that there are 2 levels of
     sequences: primary and secondary. Primary `on_next()' returns secondary
-    sequence, which multiplicates 2 numbers..
+    sequence, which multiplicates 2 numbers.
 
       # A new stream based on a range from 1 to 10
       my $mult_table = Data::Enumerable::Lazy->from_list(1..10)->continue({
@@ -372,8 +372,14 @@ INSTANCE METHODS
     original enumerable. Works the same way as perl map {} function but it's
     lazy.
 
-    Example Data::Enumerable::Lazy ->from_array(1, 2, 3) ->map(sub { my
-    ($number) = @_; return $number * $number });
+    Example
+
+      Data::Enumerable::Lazy
+        ->from_array(1, 2, 3)
+        ->map(sub {
+          my ($number) = @_;
+          return $number * $number
+        });
 
   reduce($acc, $callback)
     Resolves the enumerable and returns the resulting state of the
@@ -382,8 +388,14 @@ INSTANCE METHODS
 
     `reduce()' is defined for finite enumerables only.
 
-    Example Data::Enumerable::Lazy ->from_array(1, 2, 3) ->reduce(1, sub {
-    my ($acc, $number) = @_; return $acc *= $number });
+    Example
+
+      Data::Enumerable::Lazy
+        ->from_array(1, 2, 3)
+        ->reduce(1, sub {
+          my ($acc, $number) = @_;
+          return $acc *= $number
+        });
 
   grep($callback, $max_lookahead)
     `grep()' is a function which returns a new enumerable by applying a
@@ -401,8 +413,14 @@ INSTANCE METHODS
     function will return true. `next()', on the other side, returns the
     value that was pre-fetched by `has_next()'.
 
-    Example Data::Enumerable::Lazy ->from_list(1, 2, 3) ->grep(sub { my
-    ($number) = @_; return $number % 2 });
+    Example
+
+      Data::Enumerable::Lazy
+        ->from_list(1, 2, 3)
+        ->grep(sub {
+          my ($number) = @_;
+          return $number % 2
+        });
 
   resolve()
     Resolves an enumerable completely. Applicable for finite enumerables

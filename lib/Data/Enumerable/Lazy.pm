@@ -130,7 +130,7 @@ method C<take()> which returns first N results.
 In this example we will output a numbers of a multiplication table 10x10.
 What's interesting in this example is that there are 2 levels of sequences:
 primary and secondary. Primary C<on_next()> returns secondary sequence, which
-multiplicates 2 numbers..
+multiplicates 2 numbers.
 
   # A new stream based on a range from 1 to 10
   my $mult_table = Data::Enumerable::Lazy->from_list(1..10)->continue({
@@ -481,6 +481,7 @@ Creates a new enumerable by applying a user-defined function to the original
 enumerable. Works the same way as perl map {} function but it's lazy.
 
 Example
+
   Data::Enumerable::Lazy
     ->from_array(1, 2, 3)
     ->map(sub {
@@ -509,6 +510,7 @@ C<$acc>.
 C<reduce()> is defined for finite enumerables only.
 
 Example
+
   Data::Enumerable::Lazy
     ->from_array(1, 2, 3)
     ->reduce(1, sub {
@@ -544,6 +546,7 @@ true. C<next()>, on the other side, returns the value that was pre-fetched
 by C<has_next()>.
 
 Example
+
   Data::Enumerable::Lazy
     ->from_list(1, 2, 3)
     ->grep(sub {
