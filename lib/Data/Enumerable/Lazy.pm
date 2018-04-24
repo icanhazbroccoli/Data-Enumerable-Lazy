@@ -5,7 +5,7 @@ use 5.18.2;
 use strict;
 use warnings;
 
-our $VERSION = '0.031';
+our $VERSION = '0.032';
 
 =pod
 
@@ -316,11 +316,13 @@ buffer, C<on_next()> would be called.
 
 C<$element> is defined when the current collection is a contuniation of another
 enumerable. I.e.:
+
   my $enum = Data::Enumerable::Lazy->from_list(1, 2, 3);
   my $enum2 = $enum->continue({
     on_next => sub { my ($self, $i) = @_; $self->yield($i * $i) }
   });
   $enum2->to_list; # generates 1, 4, 9
+
 In this case $i would be defined and it comes from the original enumerable.
 
 The function is supposed to return an enumerable, in this case it would be

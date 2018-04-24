@@ -280,11 +280,16 @@ OPTIONS
     left in the buffer, `on_next()' would be called.
 
     `$element' is defined when the current collection is a contuniation of
-    another enumerable. I.e.: my $enum =
-    Data::Enumerable::Lazy->from_list(1, 2, 3); my $enum2 =
-    $enum->continue({ on_next => sub { my ($self, $i) = @_; $self->yield($i
-    * $i) } }); $enum2->to_list; # generates 1, 4, 9 In this case $i would
-    be defined and it comes from the original enumerable.
+    another enumerable. I.e.:
+
+      my $enum = Data::Enumerable::Lazy->from_list(1, 2, 3);
+      my $enum2 = $enum->continue({
+        on_next => sub { my ($self, $i) = @_; $self->yield($i * $i) }
+      });
+      $enum2->to_list; # generates 1, 4, 9
+
+    In this case $i would be defined and it comes from the original
+    enumerable.
 
     The function is supposed to return an enumerable, in this case it would
     be kept as the buffer object. If this function method returns any other
